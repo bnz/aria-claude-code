@@ -1,0 +1,38 @@
+{
+  "id": "info",
+  "updatedAt": "2026-02-19T12:00:00.000Z",
+  "seo": {
+    "title": "Par akupunktūru — Tradicionālā ķīniešu medicīna",
+    "description": "Uzziniet par akupunktūru — laika pārbaudītu tradicionālās ķīniešu medicīnas metodi sāpju, stresa un dažādu veselības stāvokļu ārstēšanai."
+  },
+  "title": "Par akupunktūru",
+  "sections": [
+    {
+      "type": "text",
+      "title": "Kas ir akupunktūra?",
+      "content": "Akupunktūra ir sena dziedināšanas prakse, kas sakņojas tradicionālajā ķīniešu medicīnā (TĶM) un kuras vēsture ir vairāk nekā 2500 gadu. Tā ietver plānu, sterilu adatu ievietošanu noteiktos ķermeņa punktos, kas pazīstami kā akupunktūras punkti. Šie punkti atrodas uz ceļiem, ko sauc par meridiāniem, pa kuriem plūst dzīvības enerģija (Qi)."
+    },
+    {
+      "type": "image",
+      "imagePath": "/media/placeholder.jpg",
+      "caption": "Akupunktūras ārstēšanas sesija"
+    },
+    {
+      "type": "bullets",
+      "title": "Stāvokļi, ko ārstē ar akupunktūru",
+      "items": [
+        "Hroniskas un akūtas sāpes (muguras sāpes, kakla sāpes, galvassāpes)",
+        "Stress, trauksme un bezmiegs",
+        "Gremošanas traucējumi",
+        "Alerģijas un elpošanas ceļu slimības",
+        "Muskuļu un skeleta problēmas",
+        "Sieviešu veselības problēmas"
+      ]
+    },
+    {
+      "type": "text",
+      "title": "Kā darbojas akupunktūra?",
+      "content": "No mūsdienu medicīnas viedokļa akupunktūra stimulē nervu sistēmu, veicinot dabisko pretsāpju līdzekļu (endorfīnu) un pretiekaisuma vielu izdalīšanos. Tā uzlabo asinsriti, samazina muskuļu spriedzi un aktivizē organisma pašdziedināšanās mehānismus. Pasaules Veselības organizācija (PVO) atzīst akupunktūru kā efektīvu ārstēšanas metodi vairāk nekā 40 stāvokļiem."
+    }
+  ]
+}

@@ -1,0 +1,38 @@
+{
+  "id": "info",
+  "updatedAt": "2026-02-19T12:00:00.000Z",
+  "seo": {
+    "title": "About Acupuncture — Traditional Chinese Medicine",
+    "description": "Learn about acupuncture — a time-tested method of traditional Chinese medicine for treating pain, stress, and various health conditions."
+  },
+  "title": "About Acupuncture",
+  "sections": [
+    {
+      "type": "text",
+      "title": "What is Acupuncture?",
+      "content": "Acupuncture is an ancient healing practice rooted in Traditional Chinese Medicine (TCM), dating back over 2,500 years. It involves the insertion of thin, sterile needles into specific points on the body known as acupuncture points or acupoints. These points lie along pathways called meridians, through which vital energy (Qi) flows."
+    },
+    {
+      "type": "image",
+      "imagePath": "/media/placeholder.jpg",
+      "caption": "Acupuncture treatment session"
+    },
+    {
+      "type": "bullets",
+      "title": "Conditions Treated with Acupuncture",
+      "items": [
+        "Chronic and acute pain (back pain, neck pain, headaches)",
+        "Stress, anxiety, and insomnia",
+        "Digestive disorders",
+        "Allergies and respiratory conditions",
+        "Musculoskeletal problems",
+        "Women's health issues"
+      ]
+    },
+    {
+      "type": "text",
+      "title": "How Does Acupuncture Work?",
+      "content": "From the perspective of modern medicine, acupuncture stimulates the nervous system, promoting the release of natural painkillers (endorphins) and anti-inflammatory substances. It improves blood circulation, reduces muscle tension, and activates the body's self-healing mechanisms. The World Health Organization (WHO) recognizes acupuncture as an effective treatment for over 40 conditions."
+    }
+  ]
+}

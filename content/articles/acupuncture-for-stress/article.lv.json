@@ -1,0 +1,27 @@
+{
+  "id": "article-1",
+  "slug": "acupuncture-for-stress",
+  "updatedAt": "2026-02-19T12:00:00.000Z",
+  "seo": {
+    "title": "Akupunktūra stresa mazināšanai — Kā tā darbojas",
+    "description": "Uzziniet, kā akupunktūra var palīdzēt pārvaldīt stresu un trauksmi, dabiski regulējot nervu sistēmu un veicinot endorfīnu izdalīšanos."
+  },
+  "title": "Akupunktūra stresa mazināšanai",
+  "excerpt": "Mūsdienu dzīve ir pilna ar stresa faktoriem. Uzziniet, kā akupunktūra piedāvā dabisku pieeju stresa pārvaldīšanai, trauksmes mazināšanai un iekšējā līdzsvara atjaunošanai.",
+  "heroImagePath": "/media/placeholder.jpg",
+  "sections": [
+    {
+      "type": "text",
+      "content": "Stress ir viena no biežākajām veselības problēmām mūsdienu sabiedrībā. Lai gan īslaicīgs stress var būt noderīgs, hronisks stress izraisa virkni veselības problēmu, tostarp bezmiegu, gremošanas traucējumus, novājinātu imunitāti un kardiovaskulārus riskus. Akupunktūra piedāvā pierādītu, bez medikamentiem balstītu pieeju stresa pārvaldīšanai."
+    },
+    {
+      "type": "text",
+      "content": "Pētījumi rāda, ka akupunktūra stimulē endorfīnu — organisma dabisko labsajūtas ķīmisko vielu — izdalīšanos. Tā arī regulē kortizola, galvenā stresa hormona, līmeni, palīdzot organismam atgriezties līdzsvarotā stāvoklī. Regulāras sesijas var ievērojami samazināt trauksmes simptomus un uzlabot vispārējo labsajūtu."
+    },
+    {
+      "type": "image",
+      "imagePath": "/media/placeholder.jpg",
+      "caption": "Relaksācija akupunktūras sesijas laikā"
+    }
+  ]
+}

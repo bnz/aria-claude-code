@@ -1,0 +1,24 @@
+{
+  "id": "translations",
+  "updatedAt": "2026-02-19T12:00:00.000Z",
+  "header": {
+    "navHome": "Главная",
+    "navInfo": "Об акупунктуре",
+    "navArticles": "Статьи",
+    "navConditions": "Состояния",
+    "navAbout": "О специалисте",
+    "navContacts": "Контакты"
+  },
+  "footer": {
+    "copyright": "© {year} Клиника акупунктуры. Все права защищены.",
+    "address": "Адрес",
+    "phone": "Телефон",
+    "workHours": "Часы работы"
+  },
+  "buttons": {
+    "callToAction": "Записаться на консультацию",
+    "readMore": "Читать далее",
+    "viewAll": "Смотреть все",
+    "callNow": "Позвонить"
+  }
+}

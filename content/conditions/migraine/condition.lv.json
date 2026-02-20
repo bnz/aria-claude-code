@@ -1,0 +1,43 @@
+{
+  "id": "condition-2",
+  "slug": "migraine",
+  "updatedAt": "2026-02-19T12:00:00.000Z",
+  "seo": {
+    "title": "Akupunktūra migrēnai — Dabisks galvassāpju atvieglojums",
+    "description": "Uzziniet, kā akupunktūra nodrošina efektīvu, bez medikamentiem balstītu atvieglojumu migrēnai un hroniskām galvassāpēm."
+  },
+  "title": "Migrēnas ārstēšana ar akupunktūru",
+  "intro": "Migrēna skar miljoniem cilvēku visā pasaulē, izraisot novājinošas sāpes, sliktu dūšu un jutīgumu pret gaismu un skaņu. PVO ir atzinusi akupunktūru kā efektīvu ārstēšanas metodi migrēnai un spriedzes tipa galvassāpēm.",
+  "sections": [
+    {
+      "type": "text",
+      "title": "Akupunktūras pieeja migrēnai",
+      "content": "Akupunktūra ārstē migrēnu, mērķējot uz konkrētiem punktiem uz galvas, kakla un ekstremitātēm, kas regulē asinsriti un samazina nervu jutīgumu. Ārstēšana palīdz normalizēt serotonīna līmeni, samazināt asinsvadu iekaisumu un mazināt migrēnas epizožu biežumu un intensitāti."
+    },
+    {
+      "type": "bullets",
+      "title": "Akupunktūras priekšrocības migrēnai",
+      "items": [
+        "Lēkmju biežuma un smaguma samazināšanās",
+        "Mazāka atkarība no pretsāpju medikamentiem",
+        "Uzlabota miega kvalitāte",
+        "Samazināts kakla un plecu spriedze, kas izraisa migrēnu",
+        "Ilgstoša preventīva iedarbība ar regulāru ārstēšanu"
+      ]
+    }
+  ],
+  "contraindications": [
+    "Nesen gūta galvas trauma vai smadzeņu satricinājums",
+    "Aktīvi smadzeņu audzēji"
+  ],
+  "faq": [
+    {
+      "q": "Cik efektīva ir akupunktūra migrēnai?",
+      "a": "Klīniskie pētījumi rāda, ka regulāra akupunktūra var samazināt migrēnas biežumu par 50% vai vairāk daudziem pacientiem, ar iedarbību, kas salīdzināma ar preventīvajiem medikamentiem, bet bez blakusparādībām."
+    },
+    {
+      "q": "Vai akupunktūra var apturēt notiekošu migrēnu?",
+      "a": "Jā, akupunktūra var palīdzēt atvieglot aktīvu migrēnu, lai gan preventīva ārstēšana starp lēkmēm parasti ir efektīvāka ilgtermiņa pārvaldīšanai."
+    }
+  ]
+}

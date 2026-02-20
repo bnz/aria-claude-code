@@ -1,0 +1,24 @@
+{
+  "id": "translations",
+  "updatedAt": "2026-02-19T12:00:00.000Z",
+  "header": {
+    "navHome": "Home",
+    "navInfo": "About Acupuncture",
+    "navArticles": "Articles",
+    "navConditions": "Conditions",
+    "navAbout": "About",
+    "navContacts": "Contacts"
+  },
+  "footer": {
+    "copyright": "© {year} Acupuncture Clinic. All rights reserved.",
+    "address": "Address",
+    "phone": "Phone",
+    "workHours": "Working Hours"
+  },
+  "buttons": {
+    "callToAction": "Book a Consultation",
+    "readMore": "Read More",
+    "viewAll": "View All",
+    "callNow": "Call Now"
+  }
+}

@@ -1,0 +1,23 @@
+{
+  "updatedAt": "2026-02-19T12:00:00.000Z",
+  "items": [
+    {
+      "id": "condition-1",
+      "slug": "back-pain",
+      "published": true,
+      "order": 1
+    },
+    {
+      "id": "condition-2",
+      "slug": "migraine",
+      "published": true,
+      "order": 2
+    },
+    {
+      "id": "condition-3",
+      "slug": "insomnia",
+      "published": true,
+      "order": 3
+    }
+  ]
+}

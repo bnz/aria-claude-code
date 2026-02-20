@@ -1,0 +1,53 @@
+{
+  "id": "condition-1",
+  "slug": "back-pain",
+  "updatedAt": "2026-02-19T12:00:00.000Z",
+  "seo": {
+    "title": "Akupunktūra muguras sāpēm — Efektīva ārstēšana Rīgā",
+    "description": "Akupunktūra ir pierādīta ārstēšanas metode hroniskām un akūtām muguras sāpēm. Uzziniet, kā tā darbojas un ko sagaidīt no ārstēšanas sesijām Rīgā."
+  },
+  "title": "Muguras sāpju ārstēšana ar akupunktūru",
+  "intro": "Muguras sāpes ir viens no biežākajiem iemesliem, kāpēc cilvēki vēršas pēc akupunktūras ārstēšanas. Neatkarīgi no tā, vai tās izraisa muskuļu sasprindzinājums, disku trūce vai nepareiza stāja, akupunktūra piedāvā efektīvu atvieglojumu, risinot gan simptomus, gan pamatcēloņus.",
+  "sections": [
+    {
+      "type": "text",
+      "title": "Kā akupunktūra palīdz muguras sāpēm",
+      "content": "Akupunktūra darbojas, stimulējot konkrētus punktus gar mugurkaulu un apkārtējām zonām. Tas veicina asinsriti skartajā apvidū, samazina iekaisumu, atbrīvo muskuļu spriedzi un aktivizē organisma dabiskos sāpju atvieglošanas mehānismus. Daudzi pacienti izjūt ievērojamu uzlabojumu jau pēc dažām sesijām."
+    },
+    {
+      "type": "bullets",
+      "title": "Muguras sāpju veidi, ko ārstējam",
+      "items": [
+        "Lejasdaļas muguras sāpes (jostas daļa)",
+        "Augšdaļas muguras un krūšu daļas sāpes",
+        "Išiass un izstarojošas kāju sāpes",
+        "Ar disku trūci saistītas sāpes",
+        "Stājas sāpes no mazkustīga darba"
+      ]
+    },
+    {
+      "type": "text",
+      "title": "Ko sagaidīt",
+      "content": "Tipisks ārstēšanas kurss sastāv no 6-10 sesijām, sākotnēji plānojot divas reizes nedēļā, pēc tam samazinot līdz vienai reizei nedēļā, kad simptomi uzlabojas. Katra sesija ilgst 30-45 minūtes. Lielākā daļa pacientu izjūt manāmu sāpju samazinājumu pēc 3-4 sesijām."
+    }
+  ],
+  "contraindications": [
+    "Mugurkaula lūzumi vai smaga mugurkaula nestabilitāte",
+    "Aktīvas infekcijas ārstēšanas zonā",
+    "Smaga osteoporoze"
+  ],
+  "faq": [
+    {
+      "q": "Cik sesiju nepieciešamas muguras sāpēm?",
+      "a": "Lielākajai daļai pacientu ir nepieciešamas 6-10 sesijas ievērojamam uzlabojumam, lai gan atvieglojums bieži jūtams jau pēc pirmajām 2-3 sesijām."
+    },
+    {
+      "q": "Vai akupunktūra muguras sāpēm ir sāpīga?",
+      "a": "Izmantotās adatas ir ļoti plānas, un lielākā daļa pacientu izjūt tikai vieglu tirpšanas sajūtu. Pati ārstēšana lielākajai daļai cilvēku ir relaksējoša."
+    },
+    {
+      "q": "Vai akupunktūra var aizstāt operāciju muguras sāpēm?",
+      "a": "Daudzos gadījumos akupunktūra var palīdzēt izvairīties no operācijas, efektīvi pārvaldot sāpes un veicinot dzīšanu. Tomēr dažiem stāvokļiem joprojām var būt nepieciešama ķirurģiska iejaukšanās."
+    }
+  ]
+}

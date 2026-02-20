@@ -1,0 +1,22 @@
+{
+  "id": "article-2",
+  "slug": "benefits-of-regular-treatment",
+  "updatedAt": "2026-02-19T12:00:00.000Z",
+  "seo": {
+    "title": "Regulāras akupunktūras ārstēšanas priekšrocības",
+    "description": "Izpētiet regulāru akupunktūras sesiju ilgtermiņa veselības ieguvumus — no sāpju atvieglojuma līdz uzlabotai imūnsistēmai un emocionālajam līdzsvaram."
+  },
+  "title": "Regulāras akupunktūras ārstēšanas priekšrocības",
+  "excerpt": "Akupunktūra ir visefektīvākā kā pastāvīga prakse. Atklājiet regulāru ārstēšanas sesiju kumulatīvos veselības ieguvumus un kāpēc konsekvence ir svarīga ilgstošiem rezultātiem.",
+  "heroImagePath": "/media/placeholder.jpg",
+  "sections": [
+    {
+      "type": "text",
+      "content": "Lai gan viena akupunktūras sesija var sniegt tūlītēju atvieglojumu, patiesais akupunktūras spēks slēpjas regulārā, konsekventā ārstēšanā. Tāpat kā fiziskās aktivitātes dod labākos rezultātus ar regulāru praksi, akupunktūras ārstēšanas sesijas papildina viena otru, radot ilgstošas izmaiņas organismā."
+    },
+    {
+      "type": "text",
+      "content": "Pacienti, kuri regulāri apmeklē akupunktūras sesijas, ziņo par miega kvalitātes, enerģijas līmeņa un sāpju pārvaldīšanas uzlabojumiem. Pētījumi rāda, ka regulāra ārstēšana var stiprināt imūnsistēmu, samazināt iekaisumu un laika gaitā uzlabot kardiovaskulāro veselību."
+    }
+  ]
+}

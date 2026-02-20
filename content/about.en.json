@@ -1,0 +1,29 @@
+{
+  "id": "about",
+  "updatedAt": "2026-02-19T12:00:00.000Z",
+  "seo": {
+    "title": "About the Specialist — Acupuncture in Riga",
+    "description": "Meet our experienced acupuncture specialist with over 15 years of practice in traditional Chinese medicine in Riga, Latvia."
+  },
+  "title": "About the Specialist",
+  "summary": "A certified acupuncture practitioner with over 15 years of experience in traditional Chinese medicine. Graduated from Beijing University of Chinese Medicine and holds multiple international certifications in acupuncture and TCM therapy.",
+  "credentials": [
+    "Licensed Acupuncturist (Latvia)",
+    "Doctor of Traditional Chinese Medicine (Beijing UCM)",
+    "Member of the European Traditional Chinese Medicine Association"
+  ],
+  "experienceYears": 15,
+  "certificates": [
+    {
+      "title": "Diploma in Traditional Chinese Medicine",
+      "imagePath": "/media/placeholder.jpg"
+    },
+    {
+      "title": "Advanced Acupuncture Certification",
+      "imagePath": "/media/placeholder.jpg"
+    },
+    {
+      "title": "Pain Management Specialization"
+    }
+  ]
+}

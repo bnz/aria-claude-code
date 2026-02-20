@@ -1,0 +1,43 @@
+{
+  "id": "condition-2",
+  "slug": "migraine",
+  "updatedAt": "2026-02-19T12:00:00.000Z",
+  "seo": {
+    "title": "Acupuncture for Migraines — Natural Headache Relief",
+    "description": "Discover how acupuncture provides effective, drug-free relief for migraines and chronic headaches through natural pain management techniques."
+  },
+  "title": "Migraine Treatment with Acupuncture",
+  "intro": "Migraines affect millions of people worldwide, causing debilitating pain, nausea, and sensitivity to light and sound. Acupuncture has been recognized by the WHO as an effective treatment for migraines and tension-type headaches.",
+  "sections": [
+    {
+      "type": "text",
+      "title": "Acupuncture Approach to Migraines",
+      "content": "Acupuncture treats migraines by targeting specific points on the head, neck, and extremities that regulate blood flow and reduce nerve sensitivity. Treatment helps normalize serotonin levels, reduce inflammation of blood vessels, and decrease the frequency and intensity of migraine episodes."
+    },
+    {
+      "type": "bullets",
+      "title": "Benefits of Acupuncture for Migraines",
+      "items": [
+        "Reduction in frequency and severity of attacks",
+        "Decreased reliance on pain medication",
+        "Improved sleep quality",
+        "Reduced neck and shoulder tension that triggers migraines",
+        "Long-lasting preventive effects with regular treatment"
+      ]
+    }
+  ],
+  "contraindications": [
+    "Recent head trauma or concussion",
+    "Active brain tumors"
+  ],
+  "faq": [
+    {
+      "q": "How effective is acupuncture for migraines?",
+      "a": "Clinical studies show that regular acupuncture can reduce migraine frequency by 50% or more in many patients, with effects comparable to preventive medications but without side effects."
+    },
+    {
+      "q": "Can acupuncture stop a migraine in progress?",
+      "a": "Yes, acupuncture can help relieve an active migraine, though preventive treatment between attacks is generally more effective for long-term management."
+    }
+  ]
+}

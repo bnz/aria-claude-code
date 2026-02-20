@@ -1,0 +1,9 @@
+{
+  "id": "contacts",
+  "updatedAt": "2026-02-19T12:00:00.000Z",
+  "phone": "+371 20000000",
+  "address": "Brīvības iela 100, Riga, LV-1001, Latvia",
+  "mapEmbedUrl": "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2175.5!2d24.1!3d56.95",
+  "introText": "Call to book a consultation or ask any questions about acupuncture treatments.",
+  "workHours": "Mon–Fri 10:00–18:00"
+}

@@ -1,0 +1,43 @@
+{
+  "id": "condition-3",
+  "slug": "insomnia",
+  "updatedAt": "2026-02-19T12:00:00.000Z",
+  "seo": {
+    "title": "Acupuncture for Insomnia — Natural Sleep Improvement",
+    "description": "Learn how acupuncture helps treat insomnia and sleep disorders naturally, without medication, by restoring the body's natural sleep-wake cycle."
+  },
+  "title": "Insomnia Treatment with Acupuncture",
+  "intro": "Insomnia and sleep disturbances significantly impact quality of life, leading to fatigue, impaired concentration, and weakened immunity. Acupuncture provides a natural, effective solution for improving sleep quality without the risks associated with sleeping pills.",
+  "sections": [
+    {
+      "type": "text",
+      "title": "How Acupuncture Improves Sleep",
+      "content": "Acupuncture regulates the production of melatonin, the hormone responsible for sleep-wake cycles. By stimulating specific acupoints, treatment calms the nervous system, reduces anxiety, and promotes deep relaxation. Studies have shown that acupuncture increases both sleep duration and quality."
+    },
+    {
+      "type": "bullets",
+      "title": "Sleep Issues We Address",
+      "items": [
+        "Difficulty falling asleep",
+        "Frequent night awakenings",
+        "Early morning waking",
+        "Non-restorative sleep",
+        "Stress-related insomnia"
+      ]
+    }
+  ],
+  "contraindications": [
+    "Sleep apnea (requires medical evaluation first)",
+    "Severe psychiatric conditions without medical supervision"
+  ],
+  "faq": [
+    {
+      "q": "How quickly does acupuncture help with insomnia?",
+      "a": "Many patients notice improved sleep after 2-3 sessions. A full course of 8-12 sessions is typically recommended for lasting results."
+    },
+    {
+      "q": "Can I stop taking sleeping pills if I do acupuncture?",
+      "a": "Acupuncture can help reduce dependence on sleep medications, but any changes to medication should be discussed with your prescribing doctor."
+    }
+  ]
+}

@@ -1,0 +1,17 @@
+{
+  "updatedAt": "2026-02-19T12:00:00.000Z",
+  "items": [
+    {
+      "id": "article-1",
+      "slug": "acupuncture-for-stress",
+      "published": true,
+      "order": 1
+    },
+    {
+      "id": "article-2",
+      "slug": "benefits-of-regular-treatment",
+      "published": true,
+      "order": 2
+    }
+  ]
+}

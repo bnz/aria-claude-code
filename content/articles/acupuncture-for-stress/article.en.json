@@ -1,0 +1,27 @@
+{
+  "id": "article-1",
+  "slug": "acupuncture-for-stress",
+  "updatedAt": "2026-02-19T12:00:00.000Z",
+  "seo": {
+    "title": "Acupuncture for Stress Relief — How It Works",
+    "description": "Discover how acupuncture can help manage stress and anxiety through natural nervous system regulation and endorphin release."
+  },
+  "title": "Acupuncture for Stress Relief",
+  "excerpt": "Modern life is full of stressors. Learn how acupuncture offers a natural, drug-free approach to managing stress, reducing anxiety, and restoring inner balance.",
+  "heroImagePath": "/media/placeholder.jpg",
+  "sections": [
+    {
+      "type": "text",
+      "content": "Stress is one of the most common health concerns in modern society. While short-term stress can be beneficial, chronic stress leads to a cascade of health problems including insomnia, digestive issues, weakened immunity, and cardiovascular risks. Acupuncture offers a proven, drug-free approach to stress management."
+    },
+    {
+      "type": "text",
+      "content": "Research shows that acupuncture stimulates the release of endorphins — the body's natural feel-good chemicals. It also regulates cortisol levels, the primary stress hormone, helping the body return to a balanced state. Regular sessions can significantly reduce anxiety symptoms and improve overall well-being."
+    },
+    {
+      "type": "image",
+      "imagePath": "/media/placeholder.jpg",
+      "caption": "Relaxation during an acupuncture session"
+    }
+  ]
+}

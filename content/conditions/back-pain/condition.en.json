@@ -1,0 +1,53 @@
+{
+  "id": "condition-1",
+  "slug": "back-pain",
+  "updatedAt": "2026-02-19T12:00:00.000Z",
+  "seo": {
+    "title": "Acupuncture for Back Pain — Effective Treatment in Riga",
+    "description": "Acupuncture is a proven treatment for chronic and acute back pain. Learn how it works and what to expect from treatment sessions in Riga."
+  },
+  "title": "Back Pain Treatment with Acupuncture",
+  "intro": "Back pain is one of the most common reasons people seek acupuncture treatment. Whether it is caused by muscle tension, herniated discs, or poor posture, acupuncture offers effective relief by addressing both symptoms and underlying causes.",
+  "sections": [
+    {
+      "type": "text",
+      "title": "How Acupuncture Helps Back Pain",
+      "content": "Acupuncture works by stimulating specific points along the spine and surrounding areas. This promotes blood flow to the affected region, reduces inflammation, releases muscle tension, and triggers the body's natural pain-relief mechanisms. Many patients experience significant improvement after just a few sessions."
+    },
+    {
+      "type": "bullets",
+      "title": "Types of Back Pain We Treat",
+      "items": [
+        "Lower back pain (lumbar)",
+        "Upper back and thoracic pain",
+        "Sciatica and radiating leg pain",
+        "Herniated disc-related pain",
+        "Postural pain from sedentary work"
+      ]
+    },
+    {
+      "type": "text",
+      "title": "What to Expect",
+      "content": "A typical treatment course consists of 6-10 sessions, scheduled twice a week initially, then reducing to once a week as symptoms improve. Each session lasts 30-45 minutes. Most patients feel a noticeable reduction in pain after 3-4 sessions."
+    }
+  ],
+  "contraindications": [
+    "Spinal fractures or severe spinal instability",
+    "Active infections in the treatment area",
+    "Severe osteoporosis"
+  ],
+  "faq": [
+    {
+      "q": "How many sessions are needed for back pain?",
+      "a": "Most patients need 6-10 sessions for significant improvement, though some relief is often felt after the first 2-3 sessions."
+    },
+    {
+      "q": "Is acupuncture for back pain painful?",
+      "a": "The needles used are very thin, and most patients feel only a mild tingling sensation. The treatment itself is relaxing for most people."
+    },
+    {
+      "q": "Can acupuncture replace surgery for back pain?",
+      "a": "In many cases, acupuncture can help avoid surgery by effectively managing pain and promoting healing. However, some conditions may still require surgical intervention."
+    }
+  ]
+}

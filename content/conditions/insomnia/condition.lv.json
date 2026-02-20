@@ -1,0 +1,43 @@
+{
+  "id": "condition-3",
+  "slug": "insomnia",
+  "updatedAt": "2026-02-19T12:00:00.000Z",
+  "seo": {
+    "title": "Akupunktūra bezmiega ārstēšanai — Dabisks miega uzlabojums",
+    "description": "Uzziniet, kā akupunktūra palīdz ārstēt bezmiegu un miega traucējumus dabiski, bez medikamentiem, atjaunojot organisma dabisko miega-nomoda ciklu."
+  },
+  "title": "Bezmiega ārstēšana ar akupunktūru",
+  "intro": "Bezmiegs un miega traucējumi būtiski ietekmē dzīves kvalitāti, izraisot nogurumu, pasliktinātu koncentrāciju un novājinātu imunitāti. Akupunktūra nodrošina dabisku, efektīvu risinājumu miega kvalitātes uzlabošanai bez riskiem, kas saistīti ar miega zālēm.",
+  "sections": [
+    {
+      "type": "text",
+      "title": "Kā akupunktūra uzlabo miegu",
+      "content": "Akupunktūra regulē melatonīna — hormona, kas atbild par miega-nomoda cikliem — ražošanu. Stimulējot konkrētus akupunktūras punktus, ārstēšana nomierina nervu sistēmu, samazina trauksmi un veicina dziļu relaksāciju. Pētījumi ir parādījuši, ka akupunktūra palielina gan miega ilgumu, gan kvalitāti."
+    },
+    {
+      "type": "bullets",
+      "title": "Miega problēmas, ko risinām",
+      "items": [
+        "Grūtības aizmigt",
+        "Bieža pamošanās naktī",
+        "Agra pamošanās no rīta",
+        "Neatjaunojošs miegs",
+        "Ar stresu saistīts bezmiegs"
+      ]
+    }
+  ],
+  "contraindications": [
+    "Miega apnoja (vispirms nepieciešama medicīniska izvērtēšana)",
+    "Smagas psihiskas slimības bez medicīniskas uzraudzības"
+  ],
+  "faq": [
+    {
+      "q": "Cik ātri akupunktūra palīdz ar bezmiegu?",
+      "a": "Daudzi pacienti pamana uzlabotu miegu pēc 2-3 sesijām. Pilns kurss no 8-12 sesijām parasti tiek ieteikts ilgstošiem rezultātiem."
+    },
+    {
+      "q": "Vai es varu pārtraukt lietot miega zāles, ja nodarbojos ar akupunktūru?",
+      "a": "Akupunktūra var palīdzēt samazināt atkarību no miega medikamentiem, bet jebkuras izmaiņas medikamentos jāpārrunā ar jūsu ārstējošo ārstu."
+    }
+  ]
+}

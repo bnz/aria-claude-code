@@ -1,0 +1,24 @@
+{
+  "id": "translations",
+  "updatedAt": "2026-02-19T12:00:00.000Z",
+  "header": {
+    "navHome": "Sākums",
+    "navInfo": "Par akupunktūru",
+    "navArticles": "Raksti",
+    "navConditions": "Veselības stāvokļi",
+    "navAbout": "Par mums",
+    "navContacts": "Kontakti"
+  },
+  "footer": {
+    "copyright": "© {year} Akupunktūras klīnika. Visas tiesības aizsargātas.",
+    "address": "Adrese",
+    "phone": "Tālrunis",
+    "workHours": "Darba laiks"
+  },
+  "buttons": {
+    "callToAction": "Pierakstīties konsultācijai",
+    "readMore": "Lasīt vairāk",
+    "viewAll": "Skatīt visus",
+    "callNow": "Zvanīt tagad"
+  }
+}

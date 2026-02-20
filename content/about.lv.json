@@ -1,0 +1,29 @@
+{
+  "id": "about",
+  "updatedAt": "2026-02-19T12:00:00.000Z",
+  "seo": {
+    "title": "Par speciālistu — Akupunktūra Rīgā",
+    "description": "Iepazīstieties ar mūsu pieredzējušo akupunktūras speciālistu ar vairāk nekā 15 gadu pieredzi tradicionālajā ķīniešu medicīnā Rīgā."
+  },
+  "title": "Par speciālistu",
+  "summary": "Sertificēts akupunktūras speciālists ar vairāk nekā 15 gadu pieredzi tradicionālajā ķīniešu medicīnā. Absolvējis Pekinas Ķīniešu medicīnas universitāti un iegūvis vairākus starptautiskus sertifikātus akupunktūrā un TĶM terapijā.",
+  "credentials": [
+    "Licencēts akupunktūras speciālists (Latvija)",
+    "Tradicionālās ķīniešu medicīnas ārsts (Pekinas UĶM)",
+    "Eiropas Tradicionālās ķīniešu medicīnas asociācijas biedrs"
+  ],
+  "experienceYears": 15,
+  "certificates": [
+    {
+      "title": "Tradicionālās ķīniešu medicīnas diploms",
+      "imagePath": "/media/placeholder.jpg"
+    },
+    {
+      "title": "Padziļināts akupunktūras sertifikāts",
+      "imagePath": "/media/placeholder.jpg"
+    },
+    {
+      "title": "Sāpju vadības specializācija"
+    }
+  ]
+}
