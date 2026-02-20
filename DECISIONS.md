@@ -25,3 +25,11 @@
 **Вопрос:** Zod v3 or v4?
 **Решение:** Zod v4 (latest)
 **Обоснование:** v4 is the current stable release on npm. The API used in the spec (z.object, z.string, z.discriminatedUnion, etc.) is compatible with v4.
+
+---
+
+## 2026-02-20 — Root URL redirect strategy
+
+**Вопрос:** Middleware или client-side redirect с `/` на язык по умолчанию? Accept-Language detection?
+**Решение:** Server-side redirect via Next.js `redirect()` to `/en` (default language). No Accept-Language detection.
+**Обоснование:** With `output: "export"` (SSG), Next.js middleware is not supported. A server redirect from the root page is the simplest approach. Accept-Language detection is not possible in static export. Users can switch language via LanguageSwitcher component.

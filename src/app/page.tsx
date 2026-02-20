@@ -1,7 +1,6 @@
-export default function Home() {
-  return (
-    <main className="flex min-h-screen items-center justify-center">
-      <h1 className="text-2xl font-semibold">Acupuncture Landing</h1>
-    </main>
-  );
+import { redirect } from "next/navigation";
+import { DEFAULT_LANGUAGE } from "@/lib/languages";
+
+export default function RootPage() {
+  redirect(`/${DEFAULT_LANGUAGE}`);
 }
