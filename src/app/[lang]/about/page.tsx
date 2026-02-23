@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 import Image from "next/image";
 import type { Language } from "@/schemas";
-import { getAbout } from "@/lib/content";
+import { getAbout, getTranslations } from "@/lib/content";
 import { generateLangStaticParams } from "@/lib/languages";
 
 export function generateStaticParams() {
@@ -23,7 +23,10 @@ export async function generateMetadata({
 
 export default async function AboutPage({ params }: { params: Promise<{ lang: string }> }) {
   const { lang } = await params;
-  const about = getAbout(lang as Language);
+  const typedLang = lang as Language;
+  const about = getAbout(typedLang);
+  const translations = getTranslations(typedLang);
+  const t = translations.buttons;
 
   return (
     <article className="mx-auto max-w-3xl px-4 py-12">
@@ -36,11 +39,7 @@ export default async function AboutPage({ params }: { params: Promise<{ lang: st
           <div className="mt-6 inline-flex items-baseline gap-2 rounded-lg bg-muted px-4 py-3">
             <span className="text-3xl font-bold text-accent">{about.experienceYears}+</span>
             <span className="text-sm font-medium text-muted-foreground">
-              {lang === "lv"
-                ? "gadu pieredze"
-                : lang === "ru"
-                  ? "лет опыта"
-                  : "years of experience"}
+              {t.yearsOfExperience}
             </span>
           </div>
         )}
@@ -49,13 +48,7 @@ export default async function AboutPage({ params }: { params: Promise<{ lang: st
       {/* Credentials */}
       {about.credentials.length > 0 && (
         <section className="mt-10">
-          <h2 className="text-2xl font-semibold">
-            {lang === "lv"
-              ? "Kvalifikācijas"
-              : lang === "ru"
-                ? "Квалификации"
-                : "Credentials"}
-          </h2>
+          <h2 className="text-2xl font-semibold">{t.credentials}</h2>
           <ul className="mt-4 space-y-3">
             {about.credentials.map((credential, i) => (
               <li key={i} className="flex items-start gap-3">
@@ -72,13 +65,7 @@ export default async function AboutPage({ params }: { params: Promise<{ lang: st
       {/* Certificates */}
       {about.certificates.length > 0 && (
         <section className="mt-10">
-          <h2 className="text-2xl font-semibold">
-            {lang === "lv"
-              ? "Sertifikāti"
-              : lang === "ru"
-                ? "Сертификаты"
-                : "Certificates"}
-          </h2>
+          <h2 className="text-2xl font-semibold">{t.certificates}</h2>
           <div className="mt-4 grid gap-4 sm:grid-cols-2">
             {about.certificates.map((cert, i) => (
               <div
