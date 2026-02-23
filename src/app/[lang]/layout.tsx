@@ -1,8 +1,10 @@
 import type { Metadata } from "next";
 import { notFound } from "next/navigation";
 import { generateLangStaticParams, isValidLanguage } from "@/lib/languages";
-import { getTranslations } from "@/lib/content";
+import { getTranslations, getContacts } from "@/lib/content";
 import { I18nProvider } from "@/lib/i18n-context";
+import { Header } from "@/components/header";
+import { Footer } from "@/components/footer";
 import type { Language } from "@/schemas";
 
 export function generateStaticParams() {
@@ -44,12 +46,15 @@ export default async function LangLayout({
   }
 
   const translations = getTranslations(lang as Language);
+  const contacts = getContacts(lang as Language);
 
   return (
     <html lang={lang}>
-      <body className="antialiased">
+      <body className="flex min-h-screen flex-col antialiased">
         <I18nProvider lang={lang as Language} translations={translations}>
-          {children}
+          <Header />
+          <main className="flex-1">{children}</main>
+          <Footer contacts={contacts} />
         </I18nProvider>
       </body>
     </html>

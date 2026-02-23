@@ -6,9 +6,9 @@ export default async function HomePage({ params }: { params: Promise<{ lang: str
   const translations = getTranslations(lang as Language);
 
   return (
-    <main className="flex min-h-screen items-center justify-center">
-      <h1 className="text-2xl font-semibold">Acupuncture Landing</h1>
-      <p className="ml-2 text-lg text-gray-500">({translations.buttons.callToAction})</p>
-    </main>
+    <section className="flex flex-1 flex-col items-center justify-center px-4 py-16 text-center">
+      <h1 className="text-3xl font-bold sm:text-4xl">Acupuncture Landing</h1>
+      <p className="mt-4 text-lg text-muted-foreground">{translations.buttons.callToAction}</p>
+    </section>
   );
 }
