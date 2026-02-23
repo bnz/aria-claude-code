@@ -18,12 +18,11 @@ const NAV_ITEMS = [
 
 export function Footer({ contacts }: FooterProps) {
   const { lang, translations } = useI18n();
+  const t = translations.buttons;
+  const ft = translations.footer;
 
   const currentYear = new Date().getFullYear();
-  const copyrightText = (translations.footer.copyright ?? "© {year}").replace(
-    "{year}",
-    String(currentYear),
-  );
+  const copyrightText = (ft.copyright ?? "© {year}").replace("{year}", String(currentYear));
 
   function getNavLabel(key: string): string {
     return translations.header[key] ?? key;
@@ -36,7 +35,7 @@ export function Footer({ contacts }: FooterProps) {
           {/* Contact info */}
           <div>
             <h3 className="mb-3 text-sm font-semibold uppercase tracking-wide text-muted-foreground">
-              {translations.footer.phone ?? "Phone"}
+              {ft.phone}
             </h3>
             <a
               href={`tel:${contacts.phone.replace(/\s/g, "")}`}
@@ -47,8 +46,7 @@ export function Footer({ contacts }: FooterProps) {
 
             {contacts.workHours && (
               <p className="mt-2 text-sm text-muted-foreground">
-                <span className="font-medium">{translations.footer.workHours ?? "Hours"}:</span>{" "}
-                {contacts.workHours}
+                <span className="font-medium">{ft.workHours}:</span> {contacts.workHours}
               </p>
             )}
 
@@ -58,9 +56,9 @@ export function Footer({ contacts }: FooterProps) {
           {/* Navigation */}
           <div>
             <h3 className="mb-3 text-sm font-semibold uppercase tracking-wide text-muted-foreground">
-              Navigation
+              {ft.navigation}
             </h3>
-            <nav aria-label="Footer navigation">
+            <nav aria-label={t.footerNavigation}>
               <ul className="flex flex-col gap-2">
                 {NAV_ITEMS.map((item) => (
                   <li key={item.key}>
@@ -78,7 +76,7 @@ export function Footer({ contacts }: FooterProps) {
 
           {/* Brand / copyright */}
           <div className="sm:col-span-2 lg:col-span-1">
-            <p className="text-lg font-bold text-accent">Acupuncture</p>
+            <p className="text-lg font-bold text-accent">{t.siteName}</p>
             <p className="mt-2 text-sm text-muted-foreground">{copyrightText}</p>
           </div>
         </div>

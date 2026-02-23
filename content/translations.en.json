@@ -13,7 +13,8 @@
     "copyright": "© {year} Acupuncture Clinic. All rights reserved.",
     "address": "Address",
     "phone": "Phone",
-    "workHours": "Working Hours"
+    "workHours": "Working Hours",
+    "navigation": "Navigation"
   },
   "buttons": {
     "callToAction": "Book a Consultation",
@@ -28,6 +29,14 @@
     "ctaText": "Book your consultation today and take the first step towards natural healing.",
     "yearsOfExperience": "years of experience",
     "credentials": "Credentials",
-    "certificates": "Certificates"
+    "certificates": "Certificates",
+    "contactsMetaDescription": "Contact us for acupuncture consultations in Riga. Phone, address, working hours and map.",
+    "siteName": "Acupuncture Clinic",
+    "openMenu": "Open menu",
+    "closeMenu": "Close menu",
+    "mainNavigation": "Main navigation",
+    "mobileNavigation": "Mobile navigation",
+    "footerNavigation": "Footer navigation",
+    "languageSwitcher": "Language switcher"
   }
 }

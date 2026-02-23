@@ -22,6 +22,7 @@ const NAV_ITEMS: NavItem[] = [
 export function Header() {
   const { lang, translations } = useI18n();
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
+  const t = translations.buttons;
 
   function getNavLabel(key: string): string {
     return translations.header[key] ?? key;
@@ -36,11 +37,11 @@ export function Header() {
       <div className="mx-auto flex max-w-6xl items-center justify-between px-4 py-3">
         {/* Logo / site name */}
         <Link href={`/${lang}`} className="text-lg font-bold text-accent">
-          Acupuncture
+          {t.siteName}
         </Link>
 
         {/* Desktop navigation */}
-        <nav className="hidden items-center gap-6 md:flex" aria-label="Main navigation">
+        <nav className="hidden items-center gap-6 md:flex" aria-label={t.mainNavigation}>
           {NAV_ITEMS.map((item) => (
             <Link
               key={item.key}
@@ -62,7 +63,7 @@ export function Header() {
           className="flex items-center justify-center rounded-md p-2 text-foreground md:hidden"
           onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
           aria-expanded={mobileMenuOpen}
-          aria-label={mobileMenuOpen ? "Close menu" : "Open menu"}
+          aria-label={mobileMenuOpen ? t.closeMenu : t.openMenu}
         >
           {mobileMenuOpen ? (
             <svg
@@ -94,7 +95,7 @@ export function Header() {
 
       {/* Mobile menu */}
       {mobileMenuOpen && (
-        <nav className="border-t border-border px-4 pb-4 md:hidden" aria-label="Mobile navigation">
+        <nav className="border-t border-border px-4 pb-4 md:hidden" aria-label={t.mobileNavigation}>
           <ul className="flex flex-col gap-1 pt-2">
             {NAV_ITEMS.map((item) => (
               <li key={item.key}>

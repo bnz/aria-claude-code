@@ -3,7 +3,7 @@
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { LANGUAGES, type Language } from "@/schemas";
-import { useLang } from "@/lib/i18n-context";
+import { useLang, useTranslations } from "@/lib/i18n-context";
 
 const LANGUAGE_LABELS: Record<Language, string> = {
   en: "EN",
@@ -13,6 +13,7 @@ const LANGUAGE_LABELS: Record<Language, string> = {
 
 export function LanguageSwitcher() {
   const currentLang = useLang();
+  const translations = useTranslations();
   const pathname = usePathname();
 
   function getLocalizedPath(targetLang: Language): string {
@@ -23,7 +24,7 @@ export function LanguageSwitcher() {
   }
 
   return (
-    <nav aria-label="Language switcher" className="flex gap-2">
+    <nav aria-label={translations.buttons.languageSwitcher} className="flex gap-2">
       {LANGUAGES.map((lang) => (
         <Link
           key={lang}

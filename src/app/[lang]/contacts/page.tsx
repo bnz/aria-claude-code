@@ -15,8 +15,8 @@ export async function generateMetadata({
   const { lang } = await params;
   const t = getTranslations(lang as Language);
   return {
-    title: `${t.header.navContacts} — Acupuncture`,
-    description: `Contact us for acupuncture consultations in Riga.`,
+    title: `${t.header.navContacts} — ${t.buttons.siteName}`,
+    description: t.buttons.contactsMetaDescription,
   };
 }
 

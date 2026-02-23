@@ -16,9 +16,11 @@ export function generateMetadata({
 }: {
   params: Promise<{ lang: string }>;
 }): Promise<Metadata> {
-  return params.then(({ lang }) => ({
-    title: "Acupuncture",
-    description: "Professional acupuncture services",
+  return params.then(({ lang }) => {
+    const t = getTranslations(lang as Language);
+    return {
+    title: t.buttons.siteName,
+    description: t.buttons.heroSubtitle,
     alternates: {
       languages: {
         en: "/en",
@@ -29,7 +31,8 @@ export function generateMetadata({
     openGraph: {
       locale: lang,
     },
-  }));
+  };
+  });
 }
 
 export default async function LangLayout({

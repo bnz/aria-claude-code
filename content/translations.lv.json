@@ -13,7 +13,8 @@
     "copyright": "© {year} Akupunktūras klīnika. Visas tiesības aizsargātas.",
     "address": "Adrese",
     "phone": "Tālrunis",
-    "workHours": "Darba laiks"
+    "workHours": "Darba laiks",
+    "navigation": "Navigācija"
   },
   "buttons": {
     "callToAction": "Pierakstīties konsultācijai",
@@ -28,6 +29,14 @@
     "ctaText": "Pierakstieties konsultācijai jau šodien un speriet pirmo soli pretī dabiskai dziedināšanai.",
     "yearsOfExperience": "gadu pieredze",
     "credentials": "Kvalifikācijas",
-    "certificates": "Sertifikāti"
+    "certificates": "Sertifikāti",
+    "contactsMetaDescription": "Sazinieties ar mums par akupunktūras konsultācijām Rīgā. Tālrunis, adrese, darba laiks un karte.",
+    "siteName": "Akupunktūras klīnika",
+    "openMenu": "Atvērt izvēlni",
+    "closeMenu": "Aizvērt izvēlni",
+    "mainNavigation": "Galvenā navigācija",
+    "mobileNavigation": "Mobilā navigācija",
+    "footerNavigation": "Kājenes navigācija",
+    "languageSwitcher": "Valodas izvēle"
   }
 }
