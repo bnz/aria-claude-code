@@ -4,6 +4,8 @@ import type { Language } from "@/schemas";
 import { getAbout, getTranslations } from "@/lib/content";
 import { generateLangStaticParams } from "@/lib/languages";
 import { generatePageMetadata } from "@/lib/seo";
+import { buildPhysicianJsonLd } from "@/lib/structured-data";
+import { JsonLd } from "@/components/json-ld";
 
 export function generateStaticParams() {
   return generateLangStaticParams();
@@ -26,8 +28,11 @@ export default async function AboutPage({ params }: { params: Promise<{ lang: st
   const translations = getTranslations(typedLang);
   const t = translations.buttons;
 
+  const physicianJsonLd = buildPhysicianJsonLd(about);
+
   return (
     <article className="mx-auto max-w-3xl px-4 py-12">
+      <JsonLd data={physicianJsonLd} />
       <h1 className="text-3xl font-bold sm:text-4xl">{about.title}</h1>
 
       {/* Summary + experience */}

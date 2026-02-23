@@ -5,7 +5,9 @@ import type { Language } from "@/schemas";
 import { LANGUAGES } from "@/schemas";
 import { getTranslations, getArticlesList, getArticle } from "@/lib/content";
 import { generatePageMetadata } from "@/lib/seo";
+import { buildArticleJsonLd } from "@/lib/structured-data";
 import { ArticleSections } from "@/components/article-sections";
+import { JsonLd } from "@/components/json-ld";
 
 export function generateStaticParams() {
   const index = getArticlesList();
@@ -40,8 +42,11 @@ export default async function ArticleDetailPage({
   const translations = getTranslations(typedLang);
   const t = translations.buttons;
 
+  const articleJsonLd = buildArticleJsonLd(article, lang);
+
   return (
     <article className="mx-auto max-w-3xl px-4 py-12">
+      <JsonLd data={articleJsonLd} />
       <Link
         href={`/${lang}/articles`}
         className="text-sm font-medium text-accent transition-colors hover:text-accent/80"

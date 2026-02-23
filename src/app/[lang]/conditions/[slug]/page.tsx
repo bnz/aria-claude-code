@@ -9,7 +9,9 @@ import {
   getCondition,
 } from "@/lib/content";
 import { generatePageMetadata } from "@/lib/seo";
+import { buildFaqPageJsonLd } from "@/lib/structured-data";
 import { ContentSections } from "@/components/content-sections";
+import { JsonLd } from "@/components/json-ld";
 
 export function generateStaticParams() {
   const index = getConditionsList();
@@ -47,6 +49,7 @@ export default async function ConditionDetailPage({
 
   return (
     <article className="mx-auto max-w-3xl px-4 py-12">
+      {condition.faq.length > 0 && <JsonLd data={buildFaqPageJsonLd(condition.faq)} />}
       <Link
         href={`/${lang}/conditions`}
         className="text-sm font-medium text-accent transition-colors hover:text-accent/80"
