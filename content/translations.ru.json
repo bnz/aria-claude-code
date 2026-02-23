@@ -37,6 +37,9 @@
     "mainNavigation": "Основная навигация",
     "mobileNavigation": "Мобильная навигация",
     "footerNavigation": "Навигация в подвале",
-    "languageSwitcher": "Выбор языка"
+    "languageSwitcher": "Выбор языка",
+    "backToArticles": "Назад к статьям",
+    "articlesMetaTitle": "Статьи — Клиника акупунктуры",
+    "articlesMetaDescription": "Читайте статьи об акупунктуре, традиционной китайской медицине и естественных подходах к здоровью."
   }
 }

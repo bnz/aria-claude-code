@@ -37,6 +37,9 @@
     "mainNavigation": "Main navigation",
     "mobileNavigation": "Mobile navigation",
     "footerNavigation": "Footer navigation",
-    "languageSwitcher": "Language switcher"
+    "languageSwitcher": "Language switcher",
+    "backToArticles": "Back to Articles",
+    "articlesMetaTitle": "Articles — Acupuncture Clinic",
+    "articlesMetaDescription": "Read articles about acupuncture, traditional Chinese medicine, and natural health approaches."
   }
 }
