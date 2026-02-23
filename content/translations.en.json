@@ -40,6 +40,11 @@
     "languageSwitcher": "Language switcher",
     "backToArticles": "Back to Articles",
     "articlesMetaTitle": "Articles — Acupuncture Clinic",
-    "articlesMetaDescription": "Read articles about acupuncture, traditional Chinese medicine, and natural health approaches."
+    "articlesMetaDescription": "Read articles about acupuncture, traditional Chinese medicine, and natural health approaches.",
+    "backToConditions": "Back to Conditions",
+    "conditionsMetaTitle": "Conditions We Treat — Acupuncture Clinic",
+    "conditionsMetaDescription": "Explore conditions treated with acupuncture: back pain, migraines, insomnia, and more. Evidence-based treatment in Riga.",
+    "contraindications": "Contraindications",
+    "faqTitle": "Frequently Asked Questions"
   }
 }

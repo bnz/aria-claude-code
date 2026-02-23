@@ -40,6 +40,11 @@
     "languageSwitcher": "Valodas izvēle",
     "backToArticles": "Atpakaļ pie rakstiem",
     "articlesMetaTitle": "Raksti — Akupunktūras klīnika",
-    "articlesMetaDescription": "Lasiet rakstus par akupunktūru, tradicionālo ķīniešu medicīnu un dabiskām veselības pieejām."
+    "articlesMetaDescription": "Lasiet rakstus par akupunktūru, tradicionālo ķīniešu medicīnu un dabiskām veselības pieejām.",
+    "backToConditions": "Atpakaļ pie stāvokļiem",
+    "conditionsMetaTitle": "Stāvokļi, ko ārstējam — Akupunktūras klīnika",
+    "conditionsMetaDescription": "Uzziniet par stāvokļiem, ko ārstē ar akupunktūru: muguras sāpes, migrēna, bezmiegs un citi. Pierādīta ārstēšana Rīgā.",
+    "contraindications": "Kontrindikācijas",
+    "faqTitle": "Biežāk uzdotie jautājumi"
   }
 }
