@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import type { Language } from "@/schemas";
 import { getInfo } from "@/lib/content";
 import { generateLangStaticParams } from "@/lib/languages";
+import { generatePageMetadata } from "@/lib/seo";
 import { ContentSections } from "@/components/content-sections";
 
 export function generateStaticParams() {
@@ -15,10 +16,7 @@ export async function generateMetadata({
 }): Promise<Metadata> {
   const { lang } = await params;
   const info = getInfo(lang as Language);
-  return {
-    title: info.seo.title,
-    description: info.seo.description,
-  };
+  return generatePageMetadata(info.seo, lang as Language, "/info");
 }
 
 export default async function InfoPage({ params }: { params: Promise<{ lang: string }> }) {

@@ -4,6 +4,7 @@ import Image from "next/image";
 import type { Language } from "@/schemas";
 import { getTranslations, getArticlesList, getArticle } from "@/lib/content";
 import { generateLangStaticParams } from "@/lib/languages";
+import { generatePageMetadata } from "@/lib/seo";
 
 export function generateStaticParams() {
   return generateLangStaticParams();
@@ -16,10 +17,14 @@ export async function generateMetadata({
 }): Promise<Metadata> {
   const { lang } = await params;
   const translations = getTranslations(lang as Language);
-  return {
-    title: translations.buttons.articlesMetaTitle,
-    description: translations.buttons.articlesMetaDescription,
-  };
+  return generatePageMetadata(
+    {
+      title: translations.buttons.articlesMetaTitle,
+      description: translations.buttons.articlesMetaDescription,
+    },
+    lang as Language,
+    "/articles",
+  );
 }
 
 export default async function ArticlesListPage({

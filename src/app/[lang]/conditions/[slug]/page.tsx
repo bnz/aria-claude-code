@@ -8,6 +8,7 @@ import {
   getConditionsList,
   getCondition,
 } from "@/lib/content";
+import { generatePageMetadata } from "@/lib/seo";
 import { ContentSections } from "@/components/content-sections";
 
 export function generateStaticParams() {
@@ -29,10 +30,7 @@ export async function generateMetadata({
 }): Promise<Metadata> {
   const { lang, slug } = await params;
   const condition = getCondition(slug, lang as Language);
-  return {
-    title: condition.seo.title,
-    description: condition.seo.description,
-  };
+  return generatePageMetadata(condition.seo, lang as Language, `/conditions/${slug}`);
 }
 
 export default async function ConditionDetailPage({

@@ -4,6 +4,7 @@ import Image from "next/image";
 import type { Language } from "@/schemas";
 import { LANGUAGES } from "@/schemas";
 import { getTranslations, getArticlesList, getArticle } from "@/lib/content";
+import { generatePageMetadata } from "@/lib/seo";
 import { ArticleSections } from "@/components/article-sections";
 
 export function generateStaticParams() {
@@ -25,10 +26,7 @@ export async function generateMetadata({
 }): Promise<Metadata> {
   const { lang, slug } = await params;
   const article = getArticle(slug, lang as Language);
-  return {
-    title: article.seo.title,
-    description: article.seo.description,
-  };
+  return generatePageMetadata(article.seo, lang as Language, `/articles/${slug}`);
 }
 
 export default async function ArticleDetailPage({

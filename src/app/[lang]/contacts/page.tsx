@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import type { Language } from "@/schemas";
 import { getContacts, getTranslations } from "@/lib/content";
 import { generateLangStaticParams } from "@/lib/languages";
+import { generatePageMetadata } from "@/lib/seo";
 
 export function generateStaticParams() {
   return generateLangStaticParams();
@@ -14,10 +15,14 @@ export async function generateMetadata({
 }): Promise<Metadata> {
   const { lang } = await params;
   const t = getTranslations(lang as Language);
-  return {
-    title: `${t.header.navContacts} — ${t.buttons.siteName}`,
-    description: t.buttons.contactsMetaDescription,
-  };
+  return generatePageMetadata(
+    {
+      title: `${t.header.navContacts} — ${t.buttons.siteName}`,
+      description: t.buttons.contactsMetaDescription,
+    },
+    lang as Language,
+    "/contacts",
+  );
 }
 
 export default async function ContactsPage({ params }: { params: Promise<{ lang: string }> }) {

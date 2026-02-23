@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { notFound } from "next/navigation";
 import { generateLangStaticParams, isValidLanguage } from "@/lib/languages";
 import { getTranslations, getContacts } from "@/lib/content";
+import { generatePageMetadata } from "@/lib/seo";
 import { I18nProvider } from "@/lib/i18n-context";
 import { Header } from "@/components/header";
 import { Footer } from "@/components/footer";
@@ -11,28 +12,18 @@ export function generateStaticParams() {
   return generateLangStaticParams();
 }
 
-export function generateMetadata({
+export async function generateMetadata({
   params,
 }: {
   params: Promise<{ lang: string }>;
 }): Promise<Metadata> {
-  return params.then(({ lang }) => {
-    const t = getTranslations(lang as Language);
-    return {
-    title: t.buttons.siteName,
-    description: t.buttons.heroSubtitle,
-    alternates: {
-      languages: {
-        en: "/en",
-        lv: "/lv",
-        ru: "/ru",
-      },
-    },
-    openGraph: {
-      locale: lang,
-    },
-  };
-  });
+  const { lang } = await params;
+  const t = getTranslations(lang as Language);
+  return generatePageMetadata(
+    { title: t.buttons.siteName, description: t.buttons.heroSubtitle },
+    lang as Language,
+    "",
+  );
 }
 
 export default async function LangLayout({
