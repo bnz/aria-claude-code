@@ -1,12 +1,12 @@
 import type { Metadata } from "next";
 import Link from "next/link";
-import Image from "next/image";
 import type { Language } from "@/schemas";
 import { LANGUAGES } from "@/schemas";
 import { getTranslations, getArticlesList, getArticle } from "@/lib/content";
 import { generatePageMetadata } from "@/lib/seo";
 import { buildArticleJsonLd } from "@/lib/structured-data";
 import { ArticleSections } from "@/components/article-sections";
+import { OptimizedImage } from "@/components/optimized-image";
 import { JsonLd } from "@/components/json-ld";
 
 export function generateStaticParams() {
@@ -58,12 +58,10 @@ export default async function ArticleDetailPage({
 
       {article.heroImagePath && (
         <div className="relative mt-6 aspect-video w-full overflow-hidden rounded-lg">
-          <Image
+          <OptimizedImage
             src={article.heroImagePath}
             alt={article.title}
-            fill
-            className="object-cover"
-            sizes="(max-width: 768px) 100vw, 768px"
+            priority
           />
         </div>
       )}

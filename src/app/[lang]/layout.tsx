@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import { Inter } from "next/font/google";
 import { notFound } from "next/navigation";
 import { generateLangStaticParams, isValidLanguage } from "@/lib/languages";
 import { getTranslations, getContacts } from "@/lib/content";
@@ -9,6 +10,11 @@ import { Header } from "@/components/header";
 import { Footer } from "@/components/footer";
 import { JsonLd } from "@/components/json-ld";
 import type { Language } from "@/schemas";
+
+const inter = Inter({
+  subsets: ["latin", "latin-ext", "cyrillic"],
+  display: "swap",
+});
 
 export function generateStaticParams() {
   return generateLangStaticParams();
@@ -49,7 +55,7 @@ export default async function LangLayout({
   );
 
   return (
-    <html lang={lang}>
+    <html lang={lang} className={inter.className}>
       <body className="flex min-h-screen flex-col antialiased">
         <JsonLd data={medicalBusinessJsonLd} />
         <I18nProvider lang={lang as Language} translations={translations}>

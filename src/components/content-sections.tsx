@@ -1,5 +1,5 @@
-import Image from "next/image";
 import type { InfoSection } from "@/schemas";
+import { OptimizedImage } from "@/components/optimized-image";
 
 interface ContentSectionsProps {
   sections: InfoSection[];
@@ -45,12 +45,9 @@ function ContentSection({ section }: { section: InfoSection }) {
       return (
         <figure>
           <div className="relative aspect-video w-full overflow-hidden rounded-lg">
-            <Image
+            <OptimizedImage
               src={section.imagePath}
               alt={section.caption ?? ""}
-              fill
-              className="object-cover"
-              sizes="(max-width: 768px) 100vw, 768px"
             />
           </div>
           {section.caption && (

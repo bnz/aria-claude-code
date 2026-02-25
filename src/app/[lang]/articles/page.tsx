@@ -1,10 +1,10 @@
 import type { Metadata } from "next";
 import Link from "next/link";
-import Image from "next/image";
 import type { Language } from "@/schemas";
 import { getTranslations, getArticlesList, getArticle } from "@/lib/content";
 import { generateLangStaticParams } from "@/lib/languages";
 import { generatePageMetadata } from "@/lib/seo";
+import { OptimizedImage } from "@/components/optimized-image";
 
 export function generateStaticParams() {
   return generateLangStaticParams();
@@ -59,10 +59,9 @@ export default async function ArticlesListPage({
           >
             {article.heroImagePath && (
               <div className="relative aspect-video w-full overflow-hidden bg-muted">
-                <Image
+                <OptimizedImage
                   src={article.heroImagePath}
                   alt={article.title}
-                  fill
                   className="object-cover transition-transform group-hover:scale-105"
                   sizes="(max-width: 768px) 100vw, 50vw"
                 />

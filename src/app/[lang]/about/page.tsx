@@ -1,10 +1,10 @@
 import type { Metadata } from "next";
-import Image from "next/image";
 import type { Language } from "@/schemas";
 import { getAbout, getTranslations } from "@/lib/content";
 import { generateLangStaticParams } from "@/lib/languages";
 import { generatePageMetadata } from "@/lib/seo";
 import { buildPhysicianJsonLd } from "@/lib/structured-data";
+import { OptimizedImage } from "@/components/optimized-image";
 import { JsonLd } from "@/components/json-ld";
 
 export function generateStaticParams() {
@@ -77,11 +77,9 @@ export default async function AboutPage({ params }: { params: Promise<{ lang: st
               >
                 {cert.imagePath && (
                   <div className="relative aspect-[4/3] w-full bg-muted">
-                    <Image
+                    <OptimizedImage
                       src={cert.imagePath}
                       alt={cert.title}
-                      fill
-                      className="object-cover"
                       sizes="(max-width: 640px) 100vw, 50vw"
                     />
                   </div>
