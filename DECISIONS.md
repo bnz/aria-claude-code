@@ -49,3 +49,11 @@
 **Вопрос:** How to authenticate CMS users with GitHub? Options: OAuth Device Flow, OAuth Web Flow, Personal Access Token (PAT).
 **Решение:** Personal Access Token (PAT) entered manually by the user.
 **Обоснование:** The site uses `output: "export"` (fully static, no backend). OAuth Web Flow requires a `client_secret` on a server. OAuth Device Flow requires CORS-enabled POST to `https://github.com/login/device/code`, which GitHub blocks from browsers. PAT is the only viable fully client-side approach: user creates a fine-grained PAT with repo content scope, pastes it into the admin login form, token is validated against `GET /user` and stored in `sessionStorage`.
+
+---
+
+## 2026-02-27 — Contacts editor: shared vs per-language fields
+
+**Вопрос:** Should `phone` and `mapEmbedUrl` be shared (edit once, sync to all languages) or per-language?
+**Решение:** `phone` and `mapEmbedUrl` are shared — editing them updates all 3 language files. `address`, `introText`, `workHours` are per-language with language tabs.
+**Обоснование:** Phone number and map embed URL are identical across all languages in the seed data and logically language-independent. Address, intro text, and work hours are translatable and differ by language.
