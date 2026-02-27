@@ -2,6 +2,7 @@
 
 import { useAdminNavigation, type AdminSection } from "@/lib/admin/navigation-context";
 import { AdminCard } from "@/components/admin/ui";
+import { TranslationsEditor } from "@/components/admin/translations-editor";
 
 const SECTION_TITLES: Record<AdminSection, string> = {
   translations: "Translations",
@@ -14,6 +15,10 @@ const SECTION_TITLES: Record<AdminSection, string> = {
 
 export function AdminSectionContent() {
   const { section } = useAdminNavigation();
+
+  if (section === "translations") {
+    return <TranslationsEditor />;
+  }
 
   return (
     <AdminCard title={SECTION_TITLES[section]}>
