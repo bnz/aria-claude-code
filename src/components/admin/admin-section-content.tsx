@@ -1,0 +1,25 @@
+"use client";
+
+import { useAdminNavigation, type AdminSection } from "@/lib/admin/navigation-context";
+import { AdminCard } from "@/components/admin/ui";
+
+const SECTION_TITLES: Record<AdminSection, string> = {
+  translations: "Translations",
+  articles: "Articles",
+  conditions: "Conditions",
+  info: "Info Sections",
+  contacts: "Contacts",
+  about: "About / Specialist",
+};
+
+export function AdminSectionContent() {
+  const { section } = useAdminNavigation();
+
+  return (
+    <AdminCard title={SECTION_TITLES[section]}>
+      <p className="text-muted-foreground">
+        Editor for &quot;{section}&quot; will be implemented in a future prompt.
+      </p>
+    </AdminCard>
+  );
+}
