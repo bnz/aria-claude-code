@@ -1,12 +1,12 @@
 {
   "id": "translations",
-  "updatedAt": "2026-02-19T12:00:00.000Z",
+  "updatedAt": "2026-03-02T12:28:21.483Z",
   "header": {
     "navHome": "Home",
     "navInfo": "About Acupuncture",
     "navArticles": "Articles",
     "navConditions": "Conditions",
-    "navAbout": "About",
+    "navAbout": "About 2",
     "navContacts": "Contacts"
   },
   "footer": {
