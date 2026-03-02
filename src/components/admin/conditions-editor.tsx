@@ -24,6 +24,7 @@ import {
 import { LanguageTabs } from "@/components/admin/language-tabs";
 import { DraftRecoveryDialog } from "@/components/admin/draft-recovery-dialog";
 import { DraftIndicator } from "@/components/admin/draft-indicator";
+import { ImagePicker } from "@/components/admin/image-picker";
 
 const INDEX_DRAFT_KEY = "content/conditions/index.json";
 
@@ -785,13 +786,10 @@ export function ConditionsEditor() {
 
               {section.type === "image" && (
                 <div className="space-y-2">
-                  <AdminInput
-                    label="Image Path"
-                    id={`condition-section-${idx}-imagePath-${activeLang}`}
+                  <ImagePicker
+                    label="Image"
                     value={section.imagePath}
-                    onChange={(e) => updateSectionField(activeLang, idx, "imagePath", e.target.value)}
-                    placeholder="/media/image.jpg"
-                    error={validationErrors[`${activeLang}.sections.${idx}.imagePath`]}
+                    onChange={(path) => updateSectionField(activeLang, idx, "imagePath", path)}
                     data-testid={`condition-section-${idx}-imagePath-${activeLang}`}
                   />
                   <AdminInput

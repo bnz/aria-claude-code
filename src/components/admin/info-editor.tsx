@@ -23,6 +23,7 @@ import {
 import { LanguageTabs } from "@/components/admin/language-tabs";
 import { DraftRecoveryDialog } from "@/components/admin/draft-recovery-dialog";
 import { DraftIndicator } from "@/components/admin/draft-indicator";
+import { ImagePicker } from "@/components/admin/image-picker";
 
 const DRAFT_KEYS: Record<Language, string> = {
   en: "content/info.en.json",
@@ -561,15 +562,12 @@ export function InfoEditor() {
 
             {section.type === "image" && (
               <div className="space-y-2">
-                <AdminInput
-                  label="Image Path"
-                  id={`section-${idx}-imagePath-${activeLang}`}
+                <ImagePicker
+                  label="Image"
                   value={section.imagePath}
-                  onChange={(e) =>
-                    updateSectionField(activeLang, idx, "imagePath", e.target.value)
+                  onChange={(path) =>
+                    updateSectionField(activeLang, idx, "imagePath", path)
                   }
-                  placeholder="/media/image.jpg"
-                  error={validationErrors[`${activeLang}.sections.${idx}.imagePath`]}
                   data-testid={`section-${idx}-imagePath-${activeLang}`}
                 />
                 <AdminInput

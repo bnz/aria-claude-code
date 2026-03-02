@@ -23,6 +23,7 @@ import {
 import { LanguageTabs } from "@/components/admin/language-tabs";
 import { DraftRecoveryDialog } from "@/components/admin/draft-recovery-dialog";
 import { DraftIndicator } from "@/components/admin/draft-indicator";
+import { ImagePicker } from "@/components/admin/image-picker";
 
 const DRAFT_KEYS: Record<Language, string> = {
   en: "content/about.en.json",
@@ -522,12 +523,10 @@ export function AboutEditor() {
               data-testid={`about-cert-title-${idx}-${activeLang}`}
             />
 
-            <AdminInput
-              label="Image Path (optional)"
-              id={`about-cert-imagePath-${idx}`}
+            <ImagePicker
+              label="Certificate Image (optional)"
               value={cert.imagePath ?? ""}
-              onChange={(e) => updateCertificateImage(idx, e.target.value)}
-              placeholder="/media/certificate.jpg"
+              onChange={(path) => updateCertificateImage(idx, path)}
               data-testid={`about-cert-imagePath-${idx}`}
             />
           </div>

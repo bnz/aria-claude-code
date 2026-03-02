@@ -23,6 +23,7 @@ import {
 import { LanguageTabs } from "@/components/admin/language-tabs";
 import { DraftRecoveryDialog } from "@/components/admin/draft-recovery-dialog";
 import { DraftIndicator } from "@/components/admin/draft-indicator";
+import { ImagePicker } from "@/components/admin/image-picker";
 
 const INDEX_DRAFT_KEY = "content/articles/index.json";
 
@@ -481,12 +482,10 @@ export function ArticlesEditor() {
           data-testid={`article-excerpt-${activeLang}`}
         />
 
-        <AdminInput
-          label="Hero Image Path (optional)"
-          id={`article-heroImagePath-${activeLang}`}
+        <ImagePicker
+          label="Hero Image (optional)"
           value={langArticle.heroImagePath ?? ""}
-          onChange={(e) => updateArticleField(activeLang, "heroImagePath", e.target.value)}
-          placeholder="/media/hero.jpg"
+          onChange={(path) => updateArticleField(activeLang, "heroImagePath", path)}
           data-testid={`article-heroImagePath-${activeLang}`}
         />
 
@@ -544,13 +543,10 @@ export function ArticlesEditor() {
 
               {section.type === "image" && (
                 <div className="space-y-2">
-                  <AdminInput
-                    label="Image Path"
-                    id={`article-section-${idx}-imagePath-${activeLang}`}
+                  <ImagePicker
+                    label="Image"
                     value={section.imagePath}
-                    onChange={(e) => updateSectionField(activeLang, idx, "imagePath", e.target.value)}
-                    placeholder="/media/image.jpg"
-                    error={validationErrors[`${activeLang}.sections.${idx}.imagePath`]}
+                    onChange={(path) => updateSectionField(activeLang, idx, "imagePath", path)}
                     data-testid={`article-section-${idx}-imagePath-${activeLang}`}
                   />
                   <AdminInput
