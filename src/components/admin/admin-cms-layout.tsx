@@ -10,11 +10,17 @@ import {
 } from "@/lib/admin/navigation-context";
 import { AdminSectionContent } from "@/components/admin/admin-section-content";
 import { PublishButton, PublishPanel } from "@/components/admin/publish-panel";
+import { useDeployStatus, isDeployBlocking } from "@/lib/admin/deploy-status";
+import { DeployStatusIndicator } from "@/components/admin/deploy-status-indicator";
 
 function Sidebar({
   onNavigate,
+  deployState,
+  deployCreatedAt,
 }: {
   onNavigate?: () => void;
+  deployState?: import("@/lib/admin/deploy-status").DeployState;
+  deployCreatedAt?: string | null;
 }) {
   const { section, setSection } = useAdminNavigation();
   const { user, logout } = useAdminAuth();
@@ -49,7 +55,7 @@ function Sidebar({
       </nav>
 
       <div className="border-t border-border p-3 space-y-2">
-        <div className="text-xs text-muted-foreground">Deploy: idle</div>
+        <DeployStatusIndicator state={deployState ?? "idle"} createdAt={deployCreatedAt ?? null} />
         {user && (
           <div className="text-xs text-muted-foreground truncate">
             {user.name ?? user.login}
@@ -77,15 +83,18 @@ function MobileHeader() {
 }
 
 function CmsLayoutInner() {
+  const { token } = useAdminAuth();
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
   const [showPublishPanel, setShowPublishPanel] = useState(false);
+  const deploy = useDeployStatus(token);
+  const deployBlocked = isDeployBlocking(deploy.state);
 
   return (
     <div className="flex min-h-screen bg-background">
       {/* Desktop sidebar */}
       <aside className="hidden w-56 shrink-0 border-r border-border md:block">
         <div className="sticky top-0 h-screen overflow-y-auto">
-          <Sidebar />
+          <Sidebar deployState={deploy.state} deployCreatedAt={deploy.createdAt} />
         </div>
       </aside>
 
@@ -98,7 +107,7 @@ function CmsLayoutInner() {
             aria-hidden="true"
           />
           <aside className="relative z-50 h-full w-64 bg-background shadow-lg">
-            <Sidebar onNavigate={() => setMobileMenuOpen(false)} />
+            <Sidebar onNavigate={() => setMobileMenuOpen(false)} deployState={deploy.state} deployCreatedAt={deploy.createdAt} />
           </aside>
         </div>
       )}
@@ -126,19 +135,21 @@ function CmsLayoutInner() {
             </svg>
           </button>
           <MobileHeader />
-          <div className="ml-auto">
-            <PublishButton onClick={() => setShowPublishPanel(true)} />
+          <div className="ml-auto flex items-center gap-2">
+            <DeployStatusIndicator state={deploy.state} createdAt={deploy.createdAt} />
+            <PublishButton onClick={() => setShowPublishPanel(true)} deployBlocked={deployBlocked} />
           </div>
         </header>
 
         {/* Desktop top bar */}
-        <header className="hidden md:flex items-center justify-end border-b border-border px-6 py-3">
-          <PublishButton onClick={() => setShowPublishPanel(true)} />
+        <header className="hidden md:flex items-center justify-end gap-3 border-b border-border px-6 py-3">
+          <DeployStatusIndicator state={deploy.state} createdAt={deploy.createdAt} />
+          <PublishButton onClick={() => setShowPublishPanel(true)} deployBlocked={deployBlocked} />
         </header>
 
         <main className="flex-1 p-4 md:p-6">
           {showPublishPanel ? (
-            <PublishPanel onClose={() => setShowPublishPanel(false)} />
+            <PublishPanel onClose={() => setShowPublishPanel(false)} deployBlocked={deployBlocked} />
           ) : (
             <AdminSectionContent />
           )}

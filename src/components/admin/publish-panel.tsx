@@ -24,7 +24,7 @@ interface CommitResult {
  * Publish button that shows changed file count.
  * Opens the publish panel when clicked.
  */
-export function PublishButton({ onClick }: { onClick: () => void }) {
+export function PublishButton({ onClick, deployBlocked }: { onClick: () => void; deployBlocked?: boolean }) {
   const [changedCount, setChangedCount] = useState(0);
 
   useEffect(() => {
@@ -34,16 +34,19 @@ export function PublishButton({ onClick }: { onClick: () => void }) {
     return () => clearInterval(interval);
   }, []);
 
+  const disabled = changedCount === 0 || !!deployBlocked;
+
   return (
     <button
       onClick={onClick}
-      disabled={changedCount === 0}
+      disabled={disabled}
       className={`relative rounded-md px-3 py-1.5 text-sm font-medium transition-colors ${
-        changedCount > 0
+        !disabled
           ? "bg-accent text-accent-foreground hover:bg-accent/90"
           : "bg-muted text-muted-foreground cursor-not-allowed"
       }`}
       data-testid="publish-button"
+      title={deployBlocked ? "Deploy in progress — publish blocked" : undefined}
     >
       Publish
       {changedCount > 0 && (
@@ -61,7 +64,7 @@ export function PublishButton({ onClick }: { onClick: () => void }) {
 /**
  * Publish panel: pre-publish review, sequential commits, post-publish cleanup.
  */
-export function PublishPanel({ onClose }: { onClose: () => void }) {
+export function PublishPanel({ onClose, deployBlocked }: { onClose: () => void; deployBlocked?: boolean }) {
   const { token } = useAdminAuth();
   const [state, setState] = useState<PublishState>("reviewing");
   const [changedFiles, setChangedFiles] = useState<string[]>([]);
@@ -182,11 +185,18 @@ export function PublishPanel({ onClose }: { onClose: () => void }) {
           Each file will be committed separately. This will trigger a deploy.
         </p>
 
+        {deployBlocked && (
+          <p className="text-sm text-yellow-700 dark:text-yellow-400" data-testid="publish-deploy-blocked">
+            Deploy is in progress. Publish is blocked until it completes.
+          </p>
+        )}
+
         <div className="flex gap-2">
           <AdminButton
             variant="primary"
             size="sm"
             onClick={executePublish}
+            disabled={!!deployBlocked}
             data-testid="publish-confirm-button"
           >
             Confirm publish
