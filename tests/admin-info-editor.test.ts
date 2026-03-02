@@ -272,11 +272,11 @@ describe("InfoSchema validation", () => {
     expect(result.success).toBe(false);
   });
 
-  it("rejects info with invalid seo description (> 160 chars)", async () => {
+  it("rejects info with invalid seo description (> 320 chars)", async () => {
     const { InfoSchema } = await import("@/schemas");
     const data = {
       ...makeInfo("en"),
-      seo: { title: "Title", description: "x".repeat(161) },
+      seo: { title: "Title", description: "x".repeat(321) },
     };
     const result = InfoSchema.safeParse(data);
     expect(result.success).toBe(false);

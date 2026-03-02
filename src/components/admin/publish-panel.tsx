@@ -1,9 +1,8 @@
 "use client";
 
-import { useCallback, useEffect, useMemo, useState } from "react";
+import { useCallback, useEffect, useState } from "react";
 import { useAdminAuth } from "@/lib/admin/auth-context";
-import { createContentManager } from "@/lib/admin/content-manager";
-import { commitFile } from "@/lib/admin/github";
+import { commitFile, fetchFileSha } from "@/lib/admin/github";
 import {
   getChangedFiles,
   loadDraft,
@@ -72,11 +71,6 @@ export function PublishPanel({ onClose, deployBlocked }: { onClose: () => void; 
   const [currentIndex, setCurrentIndex] = useState(0);
   const [publishError, setPublishError] = useState<string | null>(null);
 
-  const cm = useMemo(() => {
-    if (!token) return null;
-    return createContentManager(token);
-  }, [token]);
-
   // Load changed files on mount
   useEffect(() => {
     setChangedFiles(getChangedFiles());
@@ -84,7 +78,7 @@ export function PublishPanel({ onClose, deployBlocked }: { onClose: () => void; 
 
   // Execute publish: sequential commits
   const executePublish = useCallback(async () => {
-    if (!token || !cm || changedFiles.length === 0) return;
+    if (!token || changedFiles.length === 0) return;
 
     setState("publishing");
     setPublishError(null);
@@ -110,14 +104,12 @@ export function PublishPanel({ onClose, deployBlocked }: { onClose: () => void; 
         }
 
         const content = JSON.stringify(draft, null, 2);
-        const sha = cm.getSha(filePath);
+        // Fetch current SHA from GitHub (required for updating existing files)
+        const sha = await fetchFileSha(token, filePath);
         const filename = filePath.split("/").pop() ?? filePath;
         const message = `Update ${filename} — ${new Date().toISOString()}`;
 
-        const newSha = await commitFile(token, filePath, content, message, sha);
-
-        // Update SHA cache for future commits
-        cm.invalidateCache(filePath);
+        await commitFile(token, filePath, content, message, sha ?? undefined);
 
         // Clear draft and update original
         setOriginal(filePath, draft);
@@ -146,7 +138,7 @@ export function PublishPanel({ onClose, deployBlocked }: { onClose: () => void; 
     }
 
     setState("done");
-  }, [token, cm, changedFiles]);
+  }, [token, changedFiles]);
 
   // --- Render ---
 

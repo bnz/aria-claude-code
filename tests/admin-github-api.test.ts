@@ -27,14 +27,14 @@ describe("getRepoConfig", () => {
     expect(config).toEqual({ owner: "test-owner", repo: "test-repo" });
   });
 
-  it("throws if NEXT_PUBLIC_GITHUB_OWNER is missing", () => {
+  it("returns null if NEXT_PUBLIC_GITHUB_OWNER is missing", () => {
     vi.stubEnv("NEXT_PUBLIC_GITHUB_OWNER", "");
-    expect(() => getRepoConfig()).toThrow("Missing NEXT_PUBLIC_GITHUB_OWNER");
+    expect(getRepoConfig()).toBeNull();
   });
 
-  it("throws if NEXT_PUBLIC_GITHUB_REPO is missing", () => {
+  it("returns null if NEXT_PUBLIC_GITHUB_REPO is missing", () => {
     vi.stubEnv("NEXT_PUBLIC_GITHUB_REPO", "");
-    expect(() => getRepoConfig()).toThrow("Missing NEXT_PUBLIC_GITHUB_OWNER");
+    expect(getRepoConfig()).toBeNull();
   });
 });
 

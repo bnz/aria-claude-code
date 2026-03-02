@@ -31,17 +31,25 @@ export interface DeployStatus {
 
 /**
  * Read GitHub owner/repo from environment variables.
- * Throws if either is missing.
+ * Returns null if either is missing.
  */
-export function getRepoConfig(): RepoConfig {
+export function getRepoConfig(): RepoConfig | null {
   const owner = process.env.NEXT_PUBLIC_GITHUB_OWNER;
   const repo = process.env.NEXT_PUBLIC_GITHUB_REPO;
   if (!owner || !repo) {
+    return null;
+  }
+  return { owner, repo };
+}
+
+function requireRepoConfig(): RepoConfig {
+  const config = getRepoConfig();
+  if (!config) {
     throw new Error(
       "Missing NEXT_PUBLIC_GITHUB_OWNER or NEXT_PUBLIC_GITHUB_REPO environment variables",
     );
   }
-  return { owner, repo };
+  return config;
 }
 
 /**
@@ -94,7 +102,7 @@ export async function fetchFile(
   token: string,
   path: string,
 ): Promise<GitHubFileContent> {
-  const { owner, repo } = getRepoConfig();
+  const { owner, repo } = requireRepoConfig();
   const response = await fetch(
     `${GITHUB_API_BASE}/repos/${owner}/${repo}/contents/${path}`,
     {
@@ -110,8 +118,38 @@ export async function fetchFile(
   }
 
   const data = await response.json();
-  const decoded = atob(data.content.replace(/\n/g, ""));
+  const binary = atob(data.content.replace(/\n/g, ""));
+  const bytes = Uint8Array.from(binary, (c) => c.charCodeAt(0));
+  const decoded = new TextDecoder().decode(bytes);
   return { content: decoded, sha: data.sha };
+}
+
+/**
+ * Fetch only the SHA of a file (no content decoding).
+ * Returns null if the file does not exist (404).
+ */
+export async function fetchFileSha(
+  token: string,
+  filePath: string,
+): Promise<string | null> {
+  const { owner, repo } = requireRepoConfig();
+  const response = await fetch(
+    `${GITHUB_API_BASE}/repos/${owner}/${repo}/contents/${filePath}`,
+    {
+      headers: {
+        Authorization: `Bearer ${token}`,
+        Accept: "application/vnd.github+json",
+      },
+    },
+  );
+
+  if (!response.ok) {
+    if (response.status === 404) return null;
+    throw new Error(`Failed to fetch SHA for "${filePath}": ${response.status}`);
+  }
+
+  const data = await response.json();
+  return data.sha as string;
 }
 
 /**
@@ -127,7 +165,7 @@ export async function commitFile(
   message: string,
   sha?: string,
 ): Promise<string> {
-  const { owner, repo } = getRepoConfig();
+  const { owner, repo } = requireRepoConfig();
   const encoded = btoa(unescape(encodeURIComponent(content)));
 
   const body: Record<string, string> = { message, content: encoded };
@@ -167,7 +205,7 @@ export async function uploadImage(
   base64Content: string,
   message: string,
 ): Promise<string> {
-  const { owner, repo } = getRepoConfig();
+  const { owner, repo } = requireRepoConfig();
 
   const body: Record<string, string> = {
     message,
@@ -202,7 +240,7 @@ export async function listFiles(
   token: string,
   dirPath: string,
 ): Promise<GitHubFileEntry[]> {
-  const { owner, repo } = getRepoConfig();
+  const { owner, repo } = requireRepoConfig();
   const response = await fetch(
     `${GITHUB_API_BASE}/repos/${owner}/${repo}/contents/${dirPath}`,
     {
@@ -237,7 +275,11 @@ export async function listFiles(
  * Returns "idle" status if no workflow runs are found.
  */
 export async function getDeployStatus(token: string): Promise<DeployStatus> {
-  const { owner, repo } = getRepoConfig();
+  const config = getRepoConfig();
+  if (!config) {
+    return { status: "idle", conclusion: null, createdAt: null };
+  }
+  const { owner, repo } = config;
   const response = await fetch(
     `${GITHUB_API_BASE}/repos/${owner}/${repo}/actions/runs?per_page=1`,
     {

@@ -47,10 +47,10 @@ describe("SeoSchema", () => {
     expect(result.success).toBe(false);
   });
 
-  it("rejects description over 160 chars", () => {
+  it("rejects description over 320 chars", () => {
     const result = SeoSchema.safeParse({
       ...validSeo,
-      description: "a".repeat(161),
+      description: "a".repeat(321),
     });
     expect(result.success).toBe(false);
   });
