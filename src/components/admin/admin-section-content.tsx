@@ -4,6 +4,7 @@ import { useAdminNavigation, type AdminSection } from "@/lib/admin/navigation-co
 import { AdminCard } from "@/components/admin/ui";
 import { TranslationsEditor } from "@/components/admin/translations-editor";
 import { ContactsEditor } from "@/components/admin/contacts-editor";
+import { InfoEditor } from "@/components/admin/info-editor";
 
 const SECTION_TITLES: Record<AdminSection, string> = {
   translations: "Translations",
@@ -23,6 +24,10 @@ export function AdminSectionContent() {
 
   if (section === "contacts") {
     return <ContactsEditor />;
+  }
+
+  if (section === "info") {
+    return <InfoEditor />;
   }
 
   return (
