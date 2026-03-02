@@ -1,12 +1,12 @@
 {
   "id": "translations",
-  "updatedAt": "2026-02-19T12:00:00.000Z",
+  "updatedAt": "2026-03-02T12:28:23.958Z",
   "header": {
     "navHome": "Главная",
     "navInfo": "Об акупунктуре",
     "navArticles": "Статьи",
     "navConditions": "Состояния",
-    "navAbout": "О специалисте",
+    "navAbout": "О специалисте 2",
     "navContacts": "Контакты"
   },
   "footer": {
