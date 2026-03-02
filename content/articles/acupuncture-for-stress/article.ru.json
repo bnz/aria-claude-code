@@ -1,14 +1,14 @@
 {
   "id": "article-1",
   "slug": "acupuncture-for-stress",
-  "updatedAt": "2026-02-19T12:00:00.000Z",
+  "updatedAt": "2026-03-02T13:24:25.255Z",
   "seo": {
     "title": "Акупунктура для снятия стресса — Как это работает",
     "description": "Узнайте, как акупунктура помогает справиться со стрессом и тревогой через естественную регуляцию нервной системы и выработку эндорфинов."
   },
   "title": "Акупунктура для снятия стресса",
   "excerpt": "Современная жизнь полна стрессовых факторов. Узнайте, как акупунктура предлагает естественный, безмедикаментозный подход к управлению стрессом, снижению тревоги и восстановлению внутреннего баланса.",
-  "heroImagePath": "/media/placeholder.jpg",
+  "heroImagePath": "/media/DALL·E 2025-02-12 18.22.39 - A vintage, retro-style logo for the company 'Bonez'. The text should have a distressed, worn-out appearance, as if it were painted on a wall and aged .webp",
   "sections": [
     {
       "type": "text",
@@ -20,7 +20,7 @@
     },
     {
       "type": "image",
-      "imagePath": "/media/placeholder.jpg",
+      "imagePath": "/media/DALL·E 2025-02-12 18.22.39 - A vintage, retro-style logo for the company 'Bonez'. The text should have a distressed, worn-out appearance, as if it were painted on a wall and aged .webp",
       "caption": "Расслабление во время сеанса акупунктуры"
     }
   ]
