@@ -57,3 +57,11 @@
 **Вопрос:** Should `phone` and `mapEmbedUrl` be shared (edit once, sync to all languages) or per-language?
 **Решение:** `phone` and `mapEmbedUrl` are shared — editing them updates all 3 language files. `address`, `introText`, `workHours` are per-language with language tabs.
 **Обоснование:** Phone number and map embed URL are identical across all languages in the seed data and logically language-independent. Address, intro text, and work hours are translatable and differ by language.
+
+---
+
+## 2026-03-02 — Cross-language validation default mode
+
+**Вопрос:** Should cross-language validation use strict mode (block publish with any warnings) or soft mode (allow publish after explicit confirmation)?
+**Решение:** Default mode is "soft" — warnings are shown but publish is allowed after the user explicitly confirms.
+**Обоснование:** Per spec section 15.9, both modes are supported. Soft mode is the default because it allows content editors to publish partial translations when urgently needed (e.g., update only one language) while still making them aware of incomplete translations. Strict mode can be enabled when full consistency is required.
