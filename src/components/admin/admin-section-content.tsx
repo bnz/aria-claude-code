@@ -5,6 +5,7 @@ import { AdminCard } from "@/components/admin/ui";
 import { TranslationsEditor } from "@/components/admin/translations-editor";
 import { ContactsEditor } from "@/components/admin/contacts-editor";
 import { InfoEditor } from "@/components/admin/info-editor";
+import { AboutEditor } from "@/components/admin/about-editor";
 
 const SECTION_TITLES: Record<AdminSection, string> = {
   translations: "Translations",
@@ -28,6 +29,10 @@ export function AdminSectionContent() {
 
   if (section === "info") {
     return <InfoEditor />;
+  }
+
+  if (section === "about") {
+    return <AboutEditor />;
   }
 
   return (
