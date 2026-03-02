@@ -284,7 +284,7 @@ describe("Draft UI components rendering", () => {
   function render(element: React.ReactElement): Promise<void> {
     return new Promise((resolve) => {
       root.render(element);
-      setTimeout(resolve, 0);
+      setTimeout(resolve, 50);
     });
   }
 
