@@ -1,12 +1,12 @@
 {
   "id": "translations",
-  "updatedAt": "2026-03-02T12:28:22.409Z",
+  "updatedAt": "2026-03-02T12:57:13.880Z",
   "header": {
     "navHome": "Sākums",
     "navInfo": "Par akupunktūru",
     "navArticles": "Raksti",
     "navConditions": "Veselības stāvokļi",
-    "navAbout": "Par mums 2",
+    "navAbout": "Par mums",
     "navContacts": "Kontakti"
   },
   "footer": {
