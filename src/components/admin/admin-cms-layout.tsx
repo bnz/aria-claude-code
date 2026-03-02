@@ -9,6 +9,7 @@ import {
   type AdminSection,
 } from "@/lib/admin/navigation-context";
 import { AdminSectionContent } from "@/components/admin/admin-section-content";
+import { PublishButton, PublishPanel } from "@/components/admin/publish-panel";
 
 function Sidebar({
   onNavigate,
@@ -77,6 +78,7 @@ function MobileHeader() {
 
 function CmsLayoutInner() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
+  const [showPublishPanel, setShowPublishPanel] = useState(false);
 
   return (
     <div className="flex min-h-screen bg-background">
@@ -124,10 +126,22 @@ function CmsLayoutInner() {
             </svg>
           </button>
           <MobileHeader />
+          <div className="ml-auto">
+            <PublishButton onClick={() => setShowPublishPanel(true)} />
+          </div>
+        </header>
+
+        {/* Desktop top bar */}
+        <header className="hidden md:flex items-center justify-end border-b border-border px-6 py-3">
+          <PublishButton onClick={() => setShowPublishPanel(true)} />
         </header>
 
         <main className="flex-1 p-4 md:p-6">
-          <AdminSectionContent />
+          {showPublishPanel ? (
+            <PublishPanel onClose={() => setShowPublishPanel(false)} />
+          ) : (
+            <AdminSectionContent />
+          )}
         </main>
       </div>
     </div>
