@@ -7,6 +7,7 @@ import { ContactsEditor } from "@/components/admin/contacts-editor";
 import { InfoEditor } from "@/components/admin/info-editor";
 import { AboutEditor } from "@/components/admin/about-editor";
 import { ArticlesEditor } from "@/components/admin/articles-editor";
+import { ConditionsEditor } from "@/components/admin/conditions-editor";
 
 const SECTION_TITLES: Record<AdminSection, string> = {
   translations: "Translations",
@@ -38,6 +39,10 @@ export function AdminSectionContent() {
 
   if (section === "articles") {
     return <ArticlesEditor />;
+  }
+
+  if (section === "conditions") {
+    return <ConditionsEditor />;
   }
 
   return (
